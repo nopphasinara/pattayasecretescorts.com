@@ -1,0 +1,26 @@
+# php_value post_max_size 64M
+# php_value upload_max_filesize 64M
+# php_value memory_limit 1000M
+# php_value max_execution_time 0
+# php_value max_input_time 0
+# php_value session.gc_maxlifetime 1200
+
+Options -MultiViews
+Options -Indexes
+# For security reasons, Option followsymlinks cannot be overridden.
+# Options +FollowSymlinks
+Options +SymLinksIfOwnerMatch
+
+RewriteEngine On
+# RewriteBase /demo/
+# RewriteCond %{HTTP_HOST} ^www\.pattayasecretescorts\.com [NC]
+# RewriteRule ^(.*)$ http://pattayasecretescorts.com/demo/$1 [L,R=301]
+
+# RewriteCond %{HTTP_HOST} ^www\.devilsden\-bangkok\-escorts\.com [NC]
+# RewriteRule ^(.*)$ http://devilsden-bangkok-escorts.com/demo/$1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/demo/$1 [L,R=302]
+
+RewriteCond $1 !^(index\.php|css|fancybox|image|jquery\-ui|js|script|admin|ckfinder|ckeditor|image\-upload|image\-banner|image\-profile|video|videocontrol|assets)
+RewriteRule ^(.*)$ /demo/index.php/$1 [QSA,L]

@@ -1,0 +1,153 @@
+<?php
+	$script['fancybox'] = 'yes';
+	require($fullRoot.'include/html-top.php');
+?>
+<!--e_top-->
+<?php require($fullRoot.'include/e-top-'.$sysLang.'.php'); ?>
+<!--/e_top-->
+
+<!--e_menu-->
+<?php require($fullRoot.'include/e-menu-'.$sysLang.'.php'); ?>
+<!--/e_menu-->
+
+<!--e_slide-->
+<?php require($fullRoot.'include/e-slide-'.$sysLang.'.php'); ?>
+<!--/e_slide-->
+
+<!--e_wrapper-->
+<div id="e_wrapper">
+	<div class="content_res">
+		<!--e_left-->
+		<?php require($fullRoot.'include/e-left-'.$sysLang.'.php'); ?>
+		<!--/e_left-->
+
+		<!--e_content-->
+		<div id="e_content">
+			
+			<!--e_profile_detsils-->
+			<div id="e_profile_detsils">
+				<div class="info">
+					<div class="icon">&nbsp;</div>
+					<h1 class="title text_yellow give_space10"><strong>nancy</strong></h1>
+					
+					<div class="basic_info">
+						<div class="item">
+							<div class="label inline">
+								Age
+							</div><!--
+							--><div class="content inline">
+								26
+							</div>
+						</div>
+						<div class="item">
+							<div class="label inline">
+								Measurements
+							</div><!--
+							--><div class="content inline">
+								36 D-27-34
+							</div>
+						</div>
+						<div class="item">
+							<div class="label inline">
+								Height
+							</div><!--
+							--><div class="content inline">
+								155 cm
+							</div>
+						</div>
+						<div class="item">
+							<div class="label inline">
+								See Couples
+							</div><!--
+							--><div class="content inline">
+								No
+							</div>
+						</div>
+						<div class="item last">
+							<div class="label inline">
+								Availablility
+							</div><!--
+							--><div class="content inline">
+								24 hours
+							</div>
+						</div>
+					</div>
+					
+					<div class="advance_option">
+						<h3 class="give_space10 text_yellow"><strong>Speciality</strong></h3>
+						BBBJ, COF, COB, CIM, DFK, GFE
+					</div>
+					
+					<div class="description">
+						<h3 class="give_space10 text_yellow"><strong>Description</strong></h3>
+						<p>Pure Bangkok Escorts has a yet another gorgeous lady for you, Foxy is perfect. An all round lady with wonderful curves in all the right places.</p>
+						<div>&nbsp;</div>
+						<p>Foxy is a sweet lady who will make you loose your mind when your with her, she is sophisticated and her exoticness is visual from her stunning pictures.</p>
+						<div>&nbsp;</div>
+						<p>We know we have a wild one here for you gentlemen and she is eager to ket all her passion send you into a frenzy.</p>
+						<div>&nbsp;</div>
+						<p>Foxy has great boobs and her small petite frame make her stand out and her sensual smile will never be forgotten.</p>
+						<div>&nbsp;</div>
+						<p>She has a good command in English and will accompany you to whatever you would like, be it a romantic meal, clubbing, or most important a wild passionate bedroom experience.</p>
+						<div>&nbsp;</div>
+						<p>What are you waiting for she is ready and waiting for you now.</p>
+						<div>&nbsp;</div>
+						<p>Let the fun begin with Foxy.</p>
+					</div>
+					
+					<div class="hiv_test">
+						<h3 class="give_space10 text_yellow"><strong>Hospital HIV/STD Tested</strong></h3>
+						<div class="item">
+							<a href="<?php echo $fullUrl.'image/hiv-tested.jpg'; ?>" title="HIV Tested" class="fancybox" rel="test"><strong>HIV Tested</strong></a>
+						</div>
+						<div class="item last">
+							<a href="<?php echo $fullUrl.'image/std-tested.jpg'; ?>" title="STD Tested" class="fancybox" rel="test"><strong>STD Tested</strong></a>
+						</div>
+					</div>
+				</div>
+				<div class="photo">
+					<div class="preview">
+						<a href="<?php echo $fullUrl.'image/photo-big.png'; ?>" title="Preview 1" class="fancybox" rel="group1"><img src="<?php echo $fullUrl.'image/photo-big.png'; ?>" width="354" alt="" /></a>
+					</div>
+					
+					<div class="thumbnail">
+						<?php
+							$ceil_row = ceil(4 / 2);
+							$row = 0;
+							$n = 1;
+							for($i = 1; $i <= 4; $i++) {
+								$last = ($n == 2) ? 'last' : '';
+								$row = ($n == 1) ? ($row + 1) : $row;
+								$last_row = ($row == $ceil_row) ? 'last_row' : '';
+								echo '<div class="item inline '.$last.' '.$last_row.'">
+									<a href="'.$fullUrl.'image/photo-thumbnail.png" title="Photo '.$i.'" class="fancybox" rel="group1"><img src="'.$fullUrl.'image/photo-thumbnail.png" width="175" alt="" /></a>
+								</div>';
+								$n = $n + 1;
+								$n = ($n > 2) ? 1 : $n;
+							}
+						?>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--/e_profile_detsils-->
+			
+			<?php require($fullRoot.'include/button-booking.php'); ?>
+		</div>
+		<!--/e_content-->
+
+		<!--e_right-->
+		<?php require($fullRoot.'include/e-right-'.$sysLang.'.php'); ?>
+		<!--/e_right-->
+
+		<div class="clear"></div>
+	</div>
+</div>
+<!--/e_wrapper-->
+
+<!--e_footer-->
+<?php require($fullRoot.'include/e-footer-'.$sysLang.'.php'); ?>
+<!--/e_footer-->
+<?php
+	require($fullRoot.'include/html-bottom.php');
+?>

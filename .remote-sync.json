@@ -1,0 +1,19 @@
+{
+  "logger": {
+    "title": "Remote Sync"
+  },
+  "transport": "ftp",
+  "uploadOnSave": false,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "95.211.214.202",
+  "port": "12321",
+  "target": "/domains/pattayasecretescorts.com/public_html",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "ddtweb",
+  "password": "vpjkcV8dir",
+  "watch": []
+}
